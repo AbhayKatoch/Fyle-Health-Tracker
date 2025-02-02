@@ -72,12 +72,12 @@
 
             <!-- Success Notification -->
             <div *ngIf="showNotification" class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-md text-lg font-semibold transition-opacity duration-300">
-              ✅ Workout Added Successfully!
+              Workout Added Successfully!
             </div>
       
             <!-- Go to Workout List Button -->
             <a
-              href="/workout-list"
+              routerLink="/workout-list"
               class="py-3 px-6 bg-gradient-to-r from-green-500 to-green-600 text-white text-lg font-semibold rounded-lg shadow-md hover:from-green-600 hover:to-green-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400"
             >
               View Workout List

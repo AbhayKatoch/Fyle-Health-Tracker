@@ -2,13 +2,15 @@ import { Component, OnInit, AfterViewInit, PLATFORM_ID, Inject, ElementRef, Inpu
 import { Chart, registerables } from 'chart.js'
 import { User } from '../Models/workout.model';
 import { isPlatformBrowser, CommonModule } from '@angular/common'; 
+import { RouterModule } from '@angular/router';
 
 Chart.register(...registerables);
 
 @Component({
   selector: 'app-workout-chart',
   imports: [
-    CommonModule
+    CommonModule, 
+    RouterModule,
   ],
   templateUrl: './workout-chart.component.html',
   styleUrl: './workout-chart.component.css'

@@ -3,12 +3,14 @@ import { WorkoutService } from '../services/workout.service';
 import { User } from '../Models/workout.model';
 import { FormsModule } from '@angular/forms';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-workout-list',
   imports: [
     FormsModule,
     CommonModule,
+    RouterModule,
   ],
   templateUrl: './workout-list.component.html',
   styleUrl: './workout-list.component.css'
