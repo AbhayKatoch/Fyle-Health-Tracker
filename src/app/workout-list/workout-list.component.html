@@ -1,0 +1,85 @@
+<div class="p-6 my-12 max-w-4xl mx-auto bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl shadow-xl">
+  <h2 class="text-3xl font-bold text-blue-800 text-center mb-8">Your Workouts</h2>
+
+  <!-- Search and Filter Inputs -->
+  <div class="flex flex-col sm:flex-row gap-4 mb-6">
+    <input
+      type="text"
+      placeholder="Search by Name"
+      [(ngModel)]="searchText"
+      class="p-2 border rounded-lg w-full sm:w-1/2"
+    />
+    <select [(ngModel)]="filterType" class="p-2 border rounded-lg w-full sm:w-1/2">
+      <option value="">All Workouts</option>
+      <option *ngFor="let type of ['Running', 'Cycling', 'Swimming', 'Yoga']" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+
+  <!-- Table Display -->
+  <div class="overflow-x-auto">
+    <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-md">
+      <thead class="bg-gradient-to-r from-blue-500 to-blue-600 text-white">
+        <tr>
+          <th class="p-4 text-left text-sm font-semibold">Name</th>
+          <th class="p-4 text-left text-sm font-semibold">Workouts</th>
+          <th class="p-4 text-center text-sm font-semibold">Number of Workouts</th>
+          <th class="p-4 text-center text-sm font-semibold">Total Workout Minutes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of PaginatedUsers" class="border-b hover:bg-gray-100 transition">
+          <td class="p-4 text-gray-800">{{ user.name }}</td>
+          <td class="p-4 text-gray-600">{{ getWorkoutTypes(user) }}</td>
+          <td class="p-4 text-center text-gray-800">{{ user.workouts.length || 0 }}</td>
+          <td class="p-4 text-center text-blue-700 font-medium">{{ getTotalWorkoutMinutes(user) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  <div class="flex justify-between items-center mt-6">
+    <button
+      (click)="onPageChange(currentPage - 1)"
+      [disabled]="currentPage === 1"
+      class="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg shadow-md hover:bg-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
+    >
+      Previous
+    </button>
+
+    <div class="flex space-x-2">
+      <button
+        *ngFor="let page of pages"
+        (click)="onPageChange(page)"
+        [class.bg-blue-700]="currentPage === page"
+        class="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-700"
+      >
+        {{ page }}
+      </button>
+    </div>
+
+    <button
+      (click)="onPageChange(currentPage + 1)"
+      [disabled]="currentPage === totalPages"
+      class="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg shadow-md hover:bg-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
+    >
+      Next
+    </button>
+  </div>
+
+  <!-- Action Links -->
+  <div class="mt-8 text-center">
+    <a
+      href="/"
+      class="py-3 px-6 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:from-blue-600 hover:to-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+    >
+      Add New Workout
+    </a>
+    <a
+      href="/workout-charts"
+      class="ml-4 py-3 px-6 bg-gradient-to-r from-green-500 to-green-600 text-white text-lg font-semibold rounded-lg shadow-md hover:from-green-600 hover:to-green-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+    >
+      View Charts
+    </a>
+  </div>
+</div>
