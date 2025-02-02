@@ -1,7 +1,6 @@
 <h1 class="mx-auto max-w-md my-8 text-blue-800 font-bold text-center text-3xl">Charts</h1>
 
 <div class="flex flex-col my-8 md:flex-row gap-4 p-6 max-w-6xl mx-auto bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl shadow-xl">
-    <!-- User Selection Panel -->
     <div class="w-full md:w-1/4 p-4 bg-white rounded-lg shadow-md">
       <h3 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-300 pb-2">Select User</h3>
       <div *ngFor="let user of users"
@@ -13,11 +12,9 @@
       </div>
     </div>
   
-    <!-- Workout Chart Section -->
     <div class="w-full md:w-3/4 p-4 bg-white rounded-lg shadow-md">
       <h3 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-300 pb-2">Workout Chart</h3>
       <div class="relative w-full h-96">
-        <!-- Ensure the canvas fully occupies the container -->
         <canvas #workoutChart class="absolute top-0 left-0 w-full h-full"></canvas>
       </div>
     </div>

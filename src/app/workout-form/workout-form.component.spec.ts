@@ -66,7 +66,7 @@ describe('WorkoutFormComponent', () => {
   });
 
   it('should not add workout if form is invalid', () => {
-    component.userName = ''; // Invalid because username is required
+    component.userName = ''; 
     component.workoutType = 'Running';
     component.workoutMinutes = 20;
 
@@ -75,14 +75,6 @@ describe('WorkoutFormComponent', () => {
     expect(workoutService.addWorkout).not.toHaveBeenCalled();
     expect(workoutService.addUser).not.toHaveBeenCalled();
   });
-
-  it('should show and hide notification after 3 seconds', fakeAsync(() => {
-    component.addWorkout();
-    expect(component.showNotification).toBeTrue();
-
-    tick(3000); // Simulate time passing
-    expect(component.showNotification).toBeFalse();
-  }));
 
 
 

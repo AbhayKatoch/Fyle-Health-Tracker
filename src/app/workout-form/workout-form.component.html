@@ -1,9 +1,7 @@
 <div class="p-6 max-w-md mx-auto bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl shadow-xl">
     <form #workoutForm="ngForm" (ngSubmit)="addWorkout()">
-        <!-- Form Header -->
         <h2 class="text-2xl font-bold text-blue-800 text-center mb-6">Add Your Workout</h2>
       
-        <!-- User Name -->
         <div class="mb-6">
           <label for="userName" class="block text-sm font-medium text-gray-600">User Name*</label>
           <input
@@ -15,13 +13,10 @@
             #userNameRef="ngModel"
             class="w-full mt-2 p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
-          <!-- Validation Message -->
           <p *ngIf="userNameRef.invalid && userNameRef.touched" class="text-red-500 text-sm mt-1">User Name is required</p>
         </div>
       
-        <!-- Workout Type and Workout Minutes -->
         <div class="grid grid-cols-2 gap-6 mb-6">
-          <!-- Workout Type -->
           <div>
             <label for="workoutType" class="block text-sm font-medium text-gray-600">Workout Type*</label>
             <select
@@ -38,11 +33,9 @@
               <option value="Swimming">Swimming</option>
               <option value="Yoga">Yoga</option>
             </select>
-            <!-- Validation Message -->
             <p *ngIf="workoutTypeRef.invalid && workoutTypeRef.touched" class="text-red-500 text-sm mt-1">Please select a workout type</p>
           </div>
       
-          <!-- Workout Minutes -->
           <div>
             <label for="workoutMinutes" class="block text-sm font-medium text-gray-600">Workout Minutes*</label>
             <input
@@ -55,13 +48,11 @@
               #workoutMinutesRef="ngModel"
               class="w-full mt-2 p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
-            <!-- Validation Message -->
           </div>
         </div>
       
         <!-- Add Workout Button -->
         <div class="flex justify-between mt-6">
-            <!-- Add Workout Button -->
             <button
               type="submit"
               [disabled]="workoutForm.invalid"
@@ -70,12 +61,10 @@
               Add Workout
             </button>
 
-            <!-- Success Notification -->
             <div *ngIf="showNotification" class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-md text-lg font-semibold transition-opacity duration-300">
               Workout Added Successfully!
             </div>
       
-            <!-- Go to Workout List Button -->
             <a
               routerLink="/workout-list"
               class="py-3 px-6 bg-gradient-to-r from-green-500 to-green-600 text-white text-lg font-semibold rounded-lg shadow-md hover:from-green-600 hover:to-green-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400"

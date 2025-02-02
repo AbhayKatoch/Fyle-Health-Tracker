@@ -37,7 +37,6 @@
     </table>
   </div>
 
-  <!-- Pagination -->
   <div class="flex justify-between items-center mt-6">
     <button
       (click)="onPageChange(currentPage - 1)"
@@ -47,7 +46,7 @@
       Previous
     </button>
 
-    <div class="flex space-x-2">
+    <div class="flex mr-2">
       <button
         *ngFor="let page of pages"
         (click)="onPageChange(page)"
