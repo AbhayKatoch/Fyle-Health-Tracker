@@ -1,59 +1,76 @@
-# HealthTracker
+# 🏆 Health Tracker - Backend with 100% Test Coverage  
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+## 👋 About Me  
+Hi, I’m **Abhay Katoch**, a final-year student at **Army Institute of Technology, Pune**, passionate about learning and building things. I have experience working with **Python, Angular, SQL**, focusing on building **scalable and efficient applications**.  
 
-## Development server
+This project is part of an **assignment** to implement **unit tests for an Angular application**, ensuring **100% code coverage** for a **component and a service**. It showcases my skills in **unit testing, modular design, and structured development**.
 
-To start a local development server, run:
+---
 
+## 📌 Project Overview  
+This project is a **workout tracker** that allows users to:  
+- Add workouts  
+- View a list of workouts  
+- Filter and paginate workout history  
+- Store data using `localStorage`  
+
+---
+
+## 🚀 Getting Started  
+### 📂 Prerequisites  
+Ensure you have the following installed:  
+- **Node.js** (v16 or later)  
+- **Angular CLI** (v14 or later)  
+- **Karma & Jasmine** for testing  
+
+### 📌 Setup  
+Clone the repository and install dependencies:
+```bash
+git clone https://github.com/AbhayKatoch/Fyle-Health-Tracker.git
+cd Fyle-Health-Tracker
+npm install
+```
+
+### 🔹 Running the Application  
+Start the Angular application:
 ```bash
 ng serve
 ```
+The app will be accessible at:  
+🔗 **[http://localhost:4200](http://localhost:4200)**
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## ✅ Unit Testing & Code Coverage  
+This project contains **unit tests for:**  
+- 🏋️‍♂️ **Component:** `WorkoutFormComponent`  
+- 🔧 **Service:** `WorkoutService`  
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+### 📌 Running Unit Tests  
+To run all unit tests:
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
+### 📌 Checking Code Coverage  
+To generate a **code coverage report**:
 ```bash
-ng e2e
+ng test --code-coverage
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
+## 📊 Code Coverage Report  
+This project achieves **100% code coverage**, ensuring **full test coverage** for all logic.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### 📌 Code Coverage Summary  
+
+For Component:
+![image](https://github.com/user-attachments/assets/f508fae5-95db-4d32-aba7-b58e91ed746e)
+
+For Service:
+![image](https://github.com/user-attachments/assets/1e376d82-5304-4b48-b4ae-ab776f7992ec)
+
+
+## **🙏 Thank You!**
+Thank you for taking the time to check out my assignment! I hope this demonstrates my skills. I'm looking forward to hearing back from you.
+
