@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorkoutListComponent } from './workout-list.component';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 
 describe('WorkoutListComponent', () => {
   let component: WorkoutListComponent;
@@ -8,7 +10,14 @@ describe('WorkoutListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WorkoutListComponent]
+      imports: [WorkoutListComponent],
+      providers:[
+        {provide:ActivatedRoute,
+          useValue:{
+            params: of({id:2})
+          }
+        }
+      ]
     })
     .compileComponents();
 

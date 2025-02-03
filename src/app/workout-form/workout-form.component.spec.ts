@@ -2,7 +2,8 @@ import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testin
 import { WorkoutFormComponent } from './workout-form.component';
 import { WorkoutService } from '../services/workout.service';
 import { FormsModule } from '@angular/forms';
-import { By } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 
 describe('WorkoutFormComponent', () => {
   let component: WorkoutFormComponent;
@@ -14,7 +15,9 @@ describe('WorkoutFormComponent', () => {
     const workoutServiceSpy = jasmine.createSpyObj('WorkoutService', ['getUsers', 'addUser', 'addWorkout']);
     await TestBed.configureTestingModule({
       imports: [WorkoutFormComponent, FormsModule],
-      providers: [{ provide: WorkoutService, useValue: workoutServiceSpy }]
+      providers: [{ provide: WorkoutService, useValue: workoutServiceSpy },
+        { provide: ActivatedRoute, useValue: { params: of({}) } }
+      ]
     })
     .compileComponents();
 
