@@ -79,6 +79,25 @@ describe('WorkoutFormComponent', () => {
     expect(workoutService.addUser).not.toHaveBeenCalled();
   });
 
+  it('should show and hide the notification after adding a workout', fakeAsync(() => {
+    workoutService.getUsers.and.returnValue([{ id: 1, name: 'John', workouts: [] }]);
+
+    component.userName = 'John';
+    component.workoutType = 'Running';
+    component.workoutMinutes = 30;
+
+    component.addWorkout();
+    tick();
+
+    expect(component.showNotification).toBeTrue();
+
+    tick(3000); 
+    expect(component.showNotification).toBeFalse();
+  }));
+  
+
+
+
 
 
   
