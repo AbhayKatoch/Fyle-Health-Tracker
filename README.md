@@ -1,7 +1,7 @@
 # Health Tracker
 
 ## About Me  
-Hi, I’m **Abhay Katoch**, a final-year student at **Army Institute of Technology, Pune**, passionate about learning and building things. I have experience working with **Python, Angular, SQL, Cpp**, focusing on building **scalable and efficient applications**.  
+Hi, I’m **Abhay Katoch**, a final-year student at **Army Institute of Technology, Pune**, passionate about learning and building things. I have experience working with **Python, Angular, SQL, Databases**, focusing on building **scalable and efficient applications**.  
 
 This project is part of an **assignment** to implement **unit tests for an Angular application**, ensuring code coverage for a **component and a service**. It showcases my skills in **unit testing, modular design, and structured development**.
 
@@ -43,8 +43,8 @@ The app will be accessible at:
 
 ##  Unit Testing & Code Coverage  
 This project contains **unit tests for:**  
-- 🏋️‍♂️ **Component:** `WorkoutFormComponent`  
-- 🔧 **Service:** `WorkoutService`  
+- **Component:** `WorkoutFormComponent`  
+- **Service:** `WorkoutService`  
 
 ### Running Unit Tests  
 To run all unit tests:
