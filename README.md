@@ -71,6 +71,6 @@ For Service:
 ![image](https://github.com/user-attachments/assets/1e376d82-5304-4b48-b4ae-ab776f7992ec)
 
 
-## ** Thank You!**
+## Thank You!
 Thank you for taking the time to check out my assignment! I hope this demonstrates my skills. I'm looking forward to hearing back from you.
 
