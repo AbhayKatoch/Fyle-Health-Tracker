@@ -1,7 +1,7 @@
 # Health Tracker - Backend with 100% Test Coverage  
 
 ## About Me  
-Hi, I’m **Abhay Katoch**, a final-year student at **Army Institute of Technology, Pune**, passionate about learning and building things. I have experience working with **Python, Angular, SQL**, focusing on building **scalable and efficient applications**.  
+Hi, I’m **Abhay Katoch**, a final-year student at **Army Institute of Technology, Pune**, passionate about learning and building things. I have experience working with **Python, Angular, SQL, Cpp**, focusing on building **scalable and efficient applications**.  
 
 This project is part of an **assignment** to implement **unit tests for an Angular application**, ensuring code coverage for a **component and a service**. It showcases my skills in **unit testing, modular design, and structured development**.
 
@@ -19,8 +19,8 @@ This project is a **workout tracker** that allows users to:
 ## Getting Started  
 ###  Prerequisites  
 Ensure you have the following installed:  
-- **Node.js** (v16 or later)  
-- **Angular CLI** (v14 or later)  
+- **Node.js**
+- **Angular CLI**
 - **Karma & Jasmine** for testing  
 
 ###  Setup  
