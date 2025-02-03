@@ -1,4 +1,4 @@
-# Health Tracker - Backend with 100% Test Coverage  
+# Health Tracker
 
 ## About Me  
 Hi, I’m **Abhay Katoch**, a final-year student at **Army Institute of Technology, Pune**, passionate about learning and building things. I have experience working with **Python, Angular, SQL, Cpp**, focusing on building **scalable and efficient applications**.  
